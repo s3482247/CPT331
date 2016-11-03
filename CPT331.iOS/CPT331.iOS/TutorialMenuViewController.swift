@@ -10,17 +10,16 @@ import UIKit
 
 class TutorialMenuViewController: UIViewController {
     
+    @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var searchBarView: UIVisualEffectView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hintLabel.text = "Use the Menu to customize which events are shown"
+        hintLabel.makeBold("Menu")
 
         // Do any additional setup after loading the view.
         self.searchBarView.layer.cornerRadius = 4
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

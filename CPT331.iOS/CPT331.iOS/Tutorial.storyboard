@@ -52,6 +52,9 @@
                             <constraint firstItem="Ub3-Wc-2yw" firstAttribute="centerX" secondItem="TzE-1s-hNx" secondAttribute="centerX" id="te6-Re-xsY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hintLabel" destination="b6w-km-eyt" id="bno-Wx-4UD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnP-iR-tQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,6 +104,9 @@
                             <constraint firstItem="nbm-tb-C28" firstAttribute="centerY" secondItem="pjp-fv-A5q" secondAttribute="centerY" constant="9" id="yMU-dr-2FD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hintLabel" destination="J1r-1W-wNq" id="ZJ2-aH-4nK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4P-S1-wGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,6 +189,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="hintLabel" destination="4Tm-oo-PyD" id="vkz-i6-U5M"/>
                         <outlet property="searchBarView" destination="L8P-By-Mza" id="lLp-3k-SGP"/>
                         <outlet property="searchTextField" destination="ahb-cI-AlC" id="0TV-Rz-sD2"/>
                     </connections>
@@ -260,6 +267,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="hintLabel" destination="bV4-ub-tu3" id="1t8-Jx-H4H"/>
                         <outlet property="searchBarView" destination="r2x-uV-4m0" id="OJM-xd-aac"/>
                     </connections>
                 </viewController>
@@ -286,12 +294,12 @@
                                     <constraint firstAttribute="width" constant="100" id="QSP-IG-XCj"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to EventGuardian" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbq-I4-Fi3">
-                                <rect key="frame" x="179" y="176" width="243" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to EventGuardian" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbq-I4-Fi3">
+                                <rect key="frame" x="182.5" y="176" width="237" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="ZgU-Cs-8vi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -308,16 +316,20 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dbq-I4-Fi3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oYg-YS-gs9" secondAttribute="bottom" constant="80" id="2p9-6c-T6E"/>
+                            <constraint firstItem="dbq-I4-Fi3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oYg-YS-gs9" secondAttribute="bottom" constant="70" id="2p9-6c-T6E"/>
                             <constraint firstItem="TnC-uF-mIc" firstAttribute="top" secondItem="lyh-Uq-BFw" secondAttribute="bottom" priority="750" constant="50" id="8hf-Tu-ih6"/>
                             <constraint firstItem="lyh-Uq-BFw" firstAttribute="centerY" secondItem="N5F-ko-UIy" secondAttribute="centerY" id="HQ5-ta-xO9"/>
                             <constraint firstItem="lyh-Uq-BFw" firstAttribute="top" secondItem="dbq-I4-Fi3" secondAttribute="bottom" priority="750" constant="50" id="Lkv-Nj-yzb"/>
                             <constraint firstItem="dbq-I4-Fi3" firstAttribute="centerX" secondItem="lyh-Uq-BFw" secondAttribute="centerX" id="ZPt-UV-idD"/>
                             <constraint firstItem="TnC-uF-mIc" firstAttribute="centerX" secondItem="lyh-Uq-BFw" secondAttribute="centerX" id="axn-jc-LxH"/>
-                            <constraint firstItem="IeE-xG-OV5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="TnC-uF-mIc" secondAttribute="bottom" constant="65" id="hqm-Je-QEH"/>
+                            <constraint firstItem="IeE-xG-OV5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="TnC-uF-mIc" secondAttribute="bottom" constant="55" id="hqm-Je-QEH"/>
                             <constraint firstItem="lyh-Uq-BFw" firstAttribute="centerX" secondItem="N5F-ko-UIy" secondAttribute="centerX" id="zfA-Vh-Po6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hintLabel" destination="TnC-uF-mIc" id="Fj7-bm-BHV"/>
+                        <outlet property="titleLabel" destination="dbq-I4-Fi3" id="oYb-u5-6Gf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owK-Qb-KJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

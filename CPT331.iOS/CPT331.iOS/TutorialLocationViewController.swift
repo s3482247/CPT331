@@ -10,14 +10,12 @@ import UIKit
 
 class TutorialLocationViewController: UIViewController {
 
+    @IBOutlet weak var hintLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        hintLabel.text = "Tap on Suburb Names to reveal nearby events"
+        hintLabel.makeBold("Suburb Names")
     }
 }

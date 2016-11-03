@@ -9,21 +9,18 @@
 import UIKit
 
 class TutorialSearchViewController: UIViewController {
-
+    
+    @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var searchBarView: UIVisualEffectView!
     @IBOutlet weak var searchTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hintLabel.text = "The search bar can be used to Find Suburbs"
+        hintLabel.makeBold("Find Suburbs")
 
-        // Do any additional setup after loading the view.
         self.searchBarView.layer.cornerRadius = 4
         self.searchTextField.enabled = false
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
