@@ -8,11 +8,12 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class TutorialViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
     // -----------------------------
     // MARK: Constants
     // -----------------------------
+    let exitButtonTitle = (skip: "Skip >", done: "Done >")
     let pageIdentifiers = [
         "tutorialWelcome",
         "tutorialLocation",
@@ -21,7 +22,7 @@ class TutorialViewController: UIViewController, UIPageViewControllerDelegate, UI
         "tutorialSearch"
     ]
     
-    let exitButtonTitle = (skip: "Skip >", done: "Done >")
+    
     
     // -----------------------------
     // MARK: Runtime Variables
@@ -37,7 +38,6 @@ class TutorialViewController: UIViewController, UIPageViewControllerDelegate, UI
     // -----------------------------
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var exitButton: UIButton!
-    
     
     
     
@@ -68,9 +68,20 @@ class TutorialViewController: UIViewController, UIPageViewControllerDelegate, UI
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = 0
         
-        // Set initial button text
+        // Configure exit button
+        view.bringSubviewToFront(exitButton)
         exitButton.setTitle(exitButtonTitle.skip, forState: .Normal)
     }
+    
+    @IBAction func exitButtonTapped(sender: AnyObject) {
+        (UIApplication.sharedApplication().delegate as? AppDelegate)?.setRootViewController(withIdentifier: "mapView", animated: true)
+    }
+    
+    
+    
+    // -------------------------------------
+    // MARK: UIPageViewControllerDataSource
+    // -------------------------------------
     
     func pageIndex(forViewController viewController: UIViewController) -> Int? {
         return self.pages.indexOf(viewController)
@@ -97,6 +108,12 @@ class TutorialViewController: UIViewController, UIPageViewControllerDelegate, UI
             return nil
         }
     }
+    
+    
+    
+    // -------------------------------------
+    // MARK: UIPageViewControllerDelegate
+    // -------------------------------------
     
     func pageViewController(pageViewController: UIPageViewController, willTransitionToViewControllers pendingViewControllers: [UIViewController]) {
         pendingIndex = pages.indexOf(pendingViewControllers.first!)

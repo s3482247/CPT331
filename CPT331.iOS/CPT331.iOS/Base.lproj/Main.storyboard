@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nWi-Ke-mQT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -11,7 +11,7 @@
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Map View Controller" id="BYZ-38-t0r" customClass="MapViewController" customModule="CPT331_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapView" title="Map View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MapViewController" customModule="CPT331_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -110,7 +110,7 @@
         <!--Tutorial View Controller-->
         <scene sceneID="Wqf-ox-uCl">
             <objects>
-                <viewController id="nWi-Ke-mQT" customClass="TutorialViewController" customModule="CPT331_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nWi-Ke-mQT" customClass="TutorialViewController" customModule="CPT331_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R72-bE-TXp"/>
                         <viewControllerLayoutGuide type="bottom" id="T8H-0o-JV3"/>
@@ -166,6 +166,9 @@
                                 <state key="normal" title="Skip &gt;">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="exitButtonTapped:" destination="nWi-Ke-mQT" eventType="touchUpInside" id="FIV-tb-iys"/>
+                                </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="gj0-Nw-a9d">
                                 <rect key="frame" x="264" y="563" width="71" height="37"/>
@@ -204,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OvN-7w-It2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-247" y="451"/>
+            <point key="canvasLocation" x="1267" y="451"/>
         </scene>
         <!--Menu-->
         <scene sceneID="7HG-Bv-c9V">
